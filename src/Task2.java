@@ -10,13 +10,14 @@ public class Task2 {
         Integer[] newArr = rnd(5,0,9);
         List<Integer> list = new ArrayList<>(Arrays.asList(newArr));
         System.out.println(list);
-        System.out.println(Collections.max(list));
-        System.out.println(Collections.min(list));
+        System.out.println("Максимальное значение " + Collections.max(list));
+        System.out.println("Минимальное значение " + Collections.min(list));
         int sum = 0;
         for (Integer number: list) {
             sum+=number;
         }
-        System.out.println(sum/list.size());
+        double avarage = (double) sum/ list.size();
+        System.out.println("Среднее арифметическое "+ avarage);
 
     }
     static Integer [] rnd (int count, int min, int max) {

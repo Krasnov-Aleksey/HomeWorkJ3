@@ -23,9 +23,7 @@ public class Task3 {
         //Количество повторений
         for (String valPlanets: planets) {
             int count=0;
-            //System.out.println(valPlanets);
             for (String valPlanetsList: planetsList) {
-                //System.out.println(valPlanetsList);
                 if (valPlanets.equals(valPlanetsList)) {
                     count++;
                 }

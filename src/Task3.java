@@ -5,6 +5,7 @@ Collections.frequency(list, item)
  */
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -13,7 +14,7 @@ public class Task3 {
     public static void main(String[] args) {
         String [] planets = new String[] {"Меркурий","Венера","Земля","Марс","Юпитер","Сатурн","Уран","Нептун"};
 
-        pndPlanets(planets,10);
+        rndPlanets(planets,10);
         System.out.println(planetsList);
 
         comparisonPlanets(planets);
@@ -22,18 +23,13 @@ public class Task3 {
     static void comparisonPlanets(String[] planets) {
         //Количество повторений
         for (String valPlanets: planets) {
-            int count=0;
-            for (String valPlanetsList: planetsList) {
-                if (valPlanets.equals(valPlanetsList)) {
-                    count++;
-                }
-            }
+            int count = Collections.frequency(planetsList,valPlanets);
             System.out.println(valPlanets + " повторяется " + count);
         }
 
     }
 
-    static void pndPlanets(String [] planets, int count) {
+    static void rndPlanets(String [] planets, int count) {
         // Заполнение списка случайными планетами
         Random random = new Random();
 
